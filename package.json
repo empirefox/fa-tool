@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Markdown-it plugin that adds Font Awesome icons support",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "postinstall": "typings install",
     "clean:dist": "rimraf -rf dist",
