@@ -6,7 +6,7 @@
   "scripts": {
     "postinstall": "typings install",
     "clean:dist": "rimraf -rf dist",
-    "tsc": "npm run clean:dist && tsc -d",
+    "tsc": "npm run clean:dist && tsc -d -t es5",
     "test": "ts-node node_modules/tape/bin/tape 'test/**/*.tape.ts' | tap-spec"
   },
   "repository": {
