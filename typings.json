@@ -1,0 +1,5 @@
+{
+  "globalDependencies": {
+    "markdown-it-regexp": "github:empirefox/custom-typings/markdown-it-regexp.d.ts"
+  }
+}
