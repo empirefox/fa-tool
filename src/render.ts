@@ -10,4 +10,4 @@ export function toMarkdown(stack: StackFa): string {
   return `:fa-${stack.text()}:`;
 }
 
-export const plugin: any = Plugin(/\:fa-([\w\-]+)\:/, match => render(match[1]));
+export const markdownItPlugin: any = Plugin(/\:fa-([\w\-]+)\:/, match => render(match[1]));
