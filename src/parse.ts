@@ -1,5 +1,5 @@
 import { escape } from 'markdown-it-regexp/lib/utils';
-import { Fa, sizes, colors, dirs, flips } from './fa';
+import { Fa, sizes, colors, pulls, dirs, flips } from './fa';
 import { StackFa } from './stack-fa';
 
 function add2target(seg: string[], fa: Fa) {
@@ -17,10 +17,12 @@ function add2target(seg: string[], fa: Fa) {
 					fa.color = tag;
 				} else if (~sizes.indexOf(tag)) {
 					fa.size = tag;
-				} else if (tag in dirs) {
-					fa.dir = dirs[tag];
+				} else if (~pulls.indexOf(tag)) {
+					fa.pull = tag;
+				} else if (~dirs.indexOf(+tag)) {
+					fa.dir = +tag;
 				} else if (tag in flips) {
-					fa.flip = flips[tag];
+					fa.flip = tag;
 				}
 		}
 	});
@@ -52,6 +54,6 @@ export function parse(str: string): StackFa {
 	return stack;
 }
 
-export function format(src: string, sort?: boolean): string {
-	return parse(src).text(sort);
+export function format(src: string): string {
+	return parse(src).text();
 }

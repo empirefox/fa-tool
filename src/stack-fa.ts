@@ -11,7 +11,7 @@ export class StackFa {
     let fa = xfb ? front : back;
     let stacked = fa.stacked;
     stacked.push('fa-stack-' + (xfb ? '1x' : '2x'));
-    return stacked;
+    return stacked.sort();
   }
 
   frontStacked() {
@@ -19,45 +19,34 @@ export class StackFa {
     let fa = xfb ? back : front;
     let stacked = fa.stacked;
     stacked.push('fa-stack-' + (xfb ? '2x' : '1x'));
-    return stacked;
+    return stacked.sort();
   }
 
   stack() {
-    return ['fa-stack', this.front.psize].filter(e => e);
+    return ['fa-stack', this.front.psize, this.front.ppull].filter(e => e).sort();
   }
 
-  render(sort?: boolean) {
+  render() {
     if (!this.front) {
       return this.raw || '';
-    }
-    if (sort) {
-      return this.back ?
-        `<span class="${this.stack().sort().join(' ')}">
-  <i class="${this.backStacked().sort().join(' ')}"></i>
-  <i class="${this.frontStacked().sort().join(' ')}"></i>
-</span>`:
-        `<i class="${this.front.pre.sort().join(' ')}"></i>`;
     }
     return this.back ?
       `<span class="${this.stack().join(' ')}">
   <i class="${this.backStacked().join(' ')}"></i>
   <i class="${this.frontStacked().join(' ')}"></i>
 </span>`:
-      `<i class="${this.front.pre.join(' ')}"></i>`;
+      `<i class="${this.front.pre.sort().join(' ')}"></i>`;
   }
 
-  text(sort?: boolean) {
+  text() {
     if (!this.front) {
       return this.raw || '';
     }
     if (this.back) {
-      let text = [this.back, this.front].map(fa => fa.text(sort));
-      if (this.xfb) {
-        text.push('x');
-      }
-      return text.join('---');
+      let text = `${this.back.text(true)}---${this.front.text()}`;
+      return this.xfb ? text + '---x' : text;
     }
-    return this.front.text(sort);
+    return this.front.text();
   }
 
 }
