@@ -12,16 +12,13 @@ export interface FaUnit {
   inverse?: boolean;
 }
 
-export const sizes = ['lg', '1x', '2x', '3x', '4x', '5x'];
+export const sizes = ['lg', '2x', '3x', '4x', '5x'];
 export const colors = ['muted', 'primary', 'success', 'info', 'warning', 'danger'];
 export const pulls = ['left', 'right'];
 export const dirs = [90, 180, 270];
 export const flips = { h: 'horizontal', v: 'vertical' };
 
 export class Fa {
-  btnType: string;
-  tittleType: string;
-
   name: string;
   size: string;
   color: string;

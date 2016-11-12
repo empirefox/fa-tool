@@ -1,5 +1,9 @@
 # fa-tool
 
+```
+npm install fa-tool
+```
+
 text format:
 
 * `front`
@@ -18,7 +22,7 @@ explaination:
 accepted icon attributes:
 
 ```js
-size: ['lg', '1x', '2x', '3x', '4x', '5x'];
+size: ['lg', '2x', '3x', '4x', '5x'];
 color: ['muted', 'primary', 'success', 'info', 'warning', 'danger'];
 pull: ['left', 'right'];
 direction: [90, 180, 270];
