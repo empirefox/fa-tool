@@ -1,11 +1,10 @@
 {
   "name": "fa-tool",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "font awesome tool, can be used as markdown-it plugin",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "postinstall": "typings install",
     "clean:dist": "rimraf -rf dist",
     "tsc": "npm run clean:dist && tsc -d -t es5",
     "test": "ts-node node_modules/tape/bin/tape 'test/**/*.tape.ts' | tap-spec"
