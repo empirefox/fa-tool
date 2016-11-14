@@ -11,6 +11,6 @@ test('format test', t => {
 
   t.equal(format('ban---camera--lg-----'), `ban---camera--lg`);
 
-  t.equal(format('ban--success--xxx--2x----camera--5x-------x'), `ban--success---camera--5x---x`);
+  t.equal(format('ban--success--xxx--2x----camera--5x--spin-------x'), `ban--success---camera--5x--spin---x`);
 
 });

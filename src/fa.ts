@@ -66,13 +66,13 @@ export class Fa {
   }
 
   text(isStackBack?: boolean) {
-    let { name, size, pull, flip, dir, color, border, spin, fw, inverse } = this;
-    let text = [flip, dir, color, border, spin, fw, inverse];
+    let { flip, dir, color } = this;
+    let text = [flip, dir, color, ...['border', 'spin', 'fw', 'inverse'].filter(e => this[e])];
     if (!isStackBack) {
-      text.push(size, pull);
+      text.push(this.size, this.pull);
     }
     text = text.filter(e => e).sort();
-    text.unshift(name);
+    text.unshift(this.name);
     return text.join('--');
   }
 
