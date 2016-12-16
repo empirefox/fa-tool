@@ -1,5 +1,2 @@
-export * from './fa';
-export * from './stack-fa';
-export * from './parse';
-export * from './render';
-export * from './extract';
+import { markdownItPlugin } from './render';
+module.exports = markdownItPlugin;

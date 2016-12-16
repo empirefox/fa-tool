@@ -6,7 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "clean:dist": "rimraf -rf dist",
-    "tsc": "npm run clean:dist && tsc -d -t es5",
+    "tsc": "npm run clean:dist && tsc -d -w",
     "test": "ts-node node_modules/tape/bin/tape 'test/**/*.tape.ts' | tap-spec",
     "typings": "typings install"
   },
@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/empirefox/fa-tool#readme",
   "dependencies": {
+    "markdown-it": "*",
     "markdown-it-regexp": "*"
   },
   "devDependencies": {
