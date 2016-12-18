@@ -1,6 +1,6 @@
 import test = require('tape');
 import markdownIt = require('markdown-it');
-import plugin = require('../src/index');
+import plugin = require('../src/markdown-it-plugin');
 
 declare global {
   interface String {
@@ -15,7 +15,7 @@ String.prototype.workaround = function (this : string) {
   return `<p>${s}</p>\n`;
 };
 
-test('plugin test', t => {
+test('markdown-it plugin test', t => {
 
   const md = markdownIt();
   md.use(plugin);

@@ -7,4 +7,3 @@ export function extractNamesFromCss(text: string) {
     }
   }
 }
-

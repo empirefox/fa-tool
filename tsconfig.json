@@ -17,9 +17,8 @@
       "dom",
       "es6"
     ],
-    "types": [
-      "node",
-      "tape"
+    "typeRoots": [
+      "./node_modules/@types"
     ]
   },
   "exclude": [

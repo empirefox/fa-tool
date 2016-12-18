@@ -1,16 +1,4 @@
-export interface FaUnit {
-  name: string;
-  size?: string;
-  flip?: string;
-  color?: string;
-  pull?: string;
-  dir?: number;
-
-  border?: boolean;
-  spin?: boolean;
-  fw?: boolean;
-  inverse?: boolean;
-}
+import { FaUnit } from './fa-unit';
 
 export const sizes = ['lg', '2x', '3x', '4x', '5x'];
 export const colors = ['muted', 'primary', 'success', 'info', 'warning', 'danger'];

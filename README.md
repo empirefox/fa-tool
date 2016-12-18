@@ -81,8 +81,7 @@ fa.render('ban--90--v--danger-----camera--lg--left--180--h--success-----x');
 
 ```js
 var MarkdownIt = require('markdown-it');
-var fa = require('fa-tool');
-var md = MarkdownIt().use(fa.markdownItPlugin);
+var md = MarkdownIt().use(require('fa-tool/dist/markdown-it-plugin'));
 md.render(':fa-ban---camera--lg:')
 ```
 ```html

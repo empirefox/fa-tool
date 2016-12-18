@@ -1,6 +1,6 @@
-import { escape } from 'markdown-it-regexp/lib/utils';
 import { Fa, sizes, colors, pulls, dirs, flips } from './fa';
 import { StackFa } from './stack-fa';
+const { escape } = require('markdown-it-regexp/lib/utils');
 
 function add2target(seg: string[], fa: Fa) {
 	fa.name = seg.shift();
@@ -30,7 +30,7 @@ function add2target(seg: string[], fa: Fa) {
 
 export function parse(str: string): StackFa {
 	// ban--danger---camera---x
-	let raw = escape(str);
+	let raw: string = escape(str);
 	let segs = raw.split(/\-{3,}/).filter(seg => seg).map(seg => seg && seg.split('--')).slice(0, 3);
 
 	let stack = new StackFa();
