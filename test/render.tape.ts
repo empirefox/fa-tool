@@ -1,5 +1,5 @@
 import test = require('tape');
-import { render } from '../src';
+import { render } from '../src/render';
 
 test('render test', t => {
   t.plan(7);

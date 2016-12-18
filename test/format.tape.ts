@@ -1,5 +1,5 @@
 import test = require('tape');
-import { format } from '../src';
+import { format } from '../src/parse';
 
 test('format test', t => {
   t.plan(6);
